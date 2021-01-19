@@ -1,0 +1,56 @@
+/* public start */
+html, body, #app {
+	height: 100%;
+}
+.main, .container {
+	width: 90%;
+	min-width: 1000px;
+	max-width: 1300px;
+	margin: auto;
+}
+/* public end */
+
+/* header start */
+.header {
+  background-color: #fff;
+  box-shadow: 0px 5px 16px 0px rgba(0, 0, 0, 0.1);
+}
+.logo {
+	background-image: url("https://www.btp.top/images/BTP-logo2.png");
+}
+.nav a{
+	color: #000;
+}
+.lang-icon {
+	background-image: url('https://www.btp.top/images/BTP-lang2.png');
+}
+/* header end */
+
+/* main start */
+.main {
+	min-height: calc(100% - 118px);
+	padding: 180px 72px 120px;
+	text-align: left;
+}
+.title {
+	font-size: 48px;
+	font-family: PingFangSC-Semibold, sans-serif;
+	font-weight: 600;
+	letter-spacing: 2px;
+}
+.time, .news-mian {
+	font-size: 16px;
+	font-family: PingFangSC-Regular, sans-serif;
+	font-weight: 400;
+}
+.time {
+	padding: 30px 0;
+}
+.news-mian {
+	line-height: 36px;
+}
+.littl-title {
+	font-family: PingFangSC-Semibold, sans-serif;
+	font-weight: 600;
+}
+/* main end */

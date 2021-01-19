@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>BitcoinPay-</title>
+  <link rel="icon" href="https://www.btp.top/images/favicon-20190326113208810.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://www.btp.top/style/reset.css">
+  <link rel="stylesheet" href="https://www.btp.top/style/common.css">
+  <link rel="stylesheet" href="https://www.btp.top/pressDetail/index.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script src="https://unpkg.com/vue-i18n/dist/vue-i18n"></script>
+</head>
+
+<body>
+  <div id="app">
+    <header class="header">
+      <div class="container">
+        <div class="logo">
+          <a :href=`https://www.btp.top/index.html?lang=${$i18n.locale}`></a>
+        </div>
+        <nav class="nav">
+          <a :href=`https://www.btp.top/index.html?lang=${$i18n.locale}`>{{$t('header.home')}}</a>
+          <a :href=`https://www.btp.top/index.html?lang=${$i18n.locale}#about`>{{$t('header.about')}}</a>
+          <a :href=`https://www.btp.top/index.html?lang=${$i18n.locale}#roadmap`>{{$t('header.roadmap')}}</a>
+          <a :href=`https://www.btp.top/press.html?lang=${$i18n.locale}`>{{$t('header.media')}}</a>
+          <a :href=`https://www.btp.top/index.html?lang=${$i18n.locale}#partners`>{{$t('header.partners')}}</a>
+          <a href="http://exp.btceasypay.com/insight/" target="_blank">{{$t('header.explorer')}}</a>
+          <a href="javascript:;" class="lang" @mouseover="e => onmouseover(e)" @mouseout="e => onmouseout(e)">
+            <span ref="lang" class="lang-icon"></span>
+            {{$t('header.language')}}
+            <div class="lang-change-wrap" ref="changeLang" style="display: none;">
+              <div class="lang-change">
+                <div></div>
+                <div @click="changeLang('CN')">简体中文</div>
+                <div @click="changeLang('ENG')">English</div>
+              </div>
+            </div>
+          </a>
+        </nav>
+      </div>
+    </header>
+    <main class="main">
+      <div class="title">{{current.title}}</div>
+      <div class="time">{{data(current.day, current.month)}}</div>
+      <div class="news-mian">
+        <p>{{current.general}}</p>
+        <!-- <p class="littl-title"></p> -->
+      </div>
+    </main>
+    <footer class="footer">&#169 2018 - 2019 BitcoinPay All rights reserved</footer>
+  </div>
+  <script type="text/javascript" src="https://www.btp.top/pressDetail/index.js"></script>
+</body>
+
+</html>

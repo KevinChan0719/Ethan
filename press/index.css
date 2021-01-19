@@ -1,0 +1,120 @@
+/* public start */
+html, body {
+	height: 100%;
+}
+.main, .container {
+	width: 90%;
+	min-width: 1000px;
+	max-width: 1300px;
+	margin: auto;
+}
+/* public end */
+
+/* header start */
+.header {
+  background-color: #fff;
+  box-shadow: 0px 5px 16px 0px rgba(0, 0, 0, 0.1);
+}
+.logo {
+	background-image: url("https://www.btp.top/images/BTP-logo2.png");
+}
+.nav a{
+	color: #000;
+}
+.lang-icon {
+	background-image: url('https://www.btp.top/images/BTP-lang2.png');
+}
+/* header end */
+
+/* main start */
+.main {
+	min-height: calc(100% - 220px);
+	padding: 0 50px 60px;
+}
+.title {
+	position: relative;
+	padding-top: 160px;
+	font-size: 56px;
+	font-family: PingFangSC-Ultralight, sans-serif;
+  line-height: 1;
+}
+.title::after {
+	position: absolute;
+	left: 50%;
+	bottom: -20px;
+	transform: translateX(-50%);
+	display: block;
+	content: '';
+	height: 1px;
+	width: 120px;
+	background-color: #c9050c;
+}
+.press-main {
+  margin-top: 140px;
+}
+.news {
+  padding-bottom: 60px;
+}
+.news a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.news-img img {
+  float: left;
+  height: 300px;
+  width: 400px;
+}
+.news-main {
+  flex: 1;
+  height: 300px;
+  padding-top: 20px;
+  margin-left: 60px;
+}
+.date {
+  display: flex;
+  align-items: center;
+}
+.btn {
+  width: 200px;
+  height: 48px;
+  margin-right: 40px;
+  font-size: 30px;
+  font-family: BauhausStd-Bold, sans-serif;
+  line-height: 40px;
+  color: #fff;
+  background-color: #c9050c;
+}
+.day {
+  font-size: 18px;
+  font-family: PingFangSC-Semibold;
+  font-weight: 600;
+}
+.news-title {
+  margin-top: 60px;
+  font-size: 24px;
+  font-family: PingFangSC-Semibold;
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: left;
+  overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.news-general {
+  margin-top: 30px;
+  font-size: 16px;
+	font-family: PingFangSC-Regular, sans-serif;
+	font-weight: 400;
+	color: #666;
+	line-height: 1.6;
+  text-align: left;
+  overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+/* main end */

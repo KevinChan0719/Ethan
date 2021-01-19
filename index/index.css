@@ -1,0 +1,479 @@
+/* public start */
+.container, .download, .explain, .whiteBook, .flow, .press-main, .partners-icon {
+	width: 90%;
+	min-width: 1000px;
+	max-width: 1300px;
+	margin: auto;
+}
+.text {
+	font-size: 16px;
+	line-height: 30px;
+	color: #666;
+}
+/* public end */
+
+/* header start */
+.logo {
+	background-image: url("https://www.btp.top/images/BTP_logo.png");
+}
+.lang-icon {
+	background-image: url('https://www.btp.top/images/BTP_lang.png');
+}
+/* header end */
+
+/* main start */
+.about {
+	background-color: #fff;
+}
+.banner {
+	position: relative;
+	display: flex;
+	align-items: center;
+	min-width: 1000px;
+	max-height: 900px;
+	min-height: 470px;
+	text-align: left;
+	background-position-x: center;
+	background-position-y: center;
+	background-image: url('https://www.btp.top/images/BTP_banner.png');
+	background-repeat: no-repeat;
+	background-size: auto 100%;
+}
+.wave {
+	position: absolute;
+	bottom: 0;
+}
+.download {
+
+}
+.banner-title {
+	font-size: 54px;
+	font-family: Rockwell-Bold, sans-serif;
+	font-weight: bold;
+	color: #fff;
+}
+.point {
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	margin: 0 0 -2px -8px;
+	background-color: #c9050c;
+	border-radius: 50%;
+}
+.banner-general {
+	margin-top: 40px;
+	font-size: 24px;
+	font-family: Baskerville, sans-serif;
+	font-weight: 400;
+	line-height: 36px;
+	color: #fff;
+}
+.download-btn {
+	height: 60px;
+	width: 300px;
+	margin-top: 60px;
+	font-size: 20px;
+	font-family: STHeiti-Light, sans-serif;
+	color: #fff;
+	background: #c9050c;
+}
+.title {
+	position: relative;
+	padding-top: 140px;
+	font-size: 56px;
+	font-family: PingFangSC-Ultralight, sans-serif;
+	line-height: 1;
+}
+.title::after {
+	position: absolute;
+	left: 50%;
+	bottom: -20px;
+	transform: translateX(-50%);
+	display: block;
+	content: '';
+	height: 1px;
+	width: 120px;
+	background-color: #c9050c;
+}
+.explain {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 140px;
+	margin-bottom: 156px;
+}
+.explain-title {
+	margin: 28px 0 60px;
+	font-size: 46px;
+	font-weight: 600;
+	color: #000;
+}
+.explain-title span {
+	color: #c9050c;
+}
+.explain-text {
+	min-height: 470px;
+	flex: 1;
+	text-align: left;
+}
+.explain-under {
+	margin-top: 30px;
+}
+.explain-img {
+	width: 470px;
+	height: 418px;
+	margin-left: 50px;
+}
+.explain-img img{
+	float: left;
+	height: 100%;
+	width: 100%;
+}
+.whiteBook {
+	position: relative;
+	padding-bottom: 60px;
+	margin-bottom: 110px;
+	box-shadow:0px 10px 40px 0px rgba(0, 0, 0, 0.1);
+	border-radius:2px;
+}
+.whiteBook-logo {
+	position: absolute;
+	top: -40px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 68px;
+	height: 80px;
+	background: url('https://www.btp.top/images/BTP_whitepaper.png') no-repeat center;
+	background-size: 100%;
+}
+.whiteBook-title {
+	padding: 72px 0 30px;
+	font-size: 24px;
+	font-weight: 600;
+	font-family: PingFangSC-Semibold, sans-serif;
+}
+.whiteBook-main {
+	margin: 0 30px;
+	text-align: left;
+}
+.to-read {
+	min-width: 200px;
+	height: 60px;
+	padding: 0 30px;
+	margin-top: 40px;
+	font-size: 20px;
+	font-family: STHeiti-Light, sans-serif;
+	font-weight: 300;
+	color: #fff;
+	background: #c9050c;
+	box-shadow: 0px 8px 16px 0px rgba(201,4,13,0.2);
+	border-radius: 30px;
+	cursor: pointer;
+}
+.roadmap {
+	padding-bottom: 90px;
+	background-color: #f5f5f5;
+}
+.flow {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 140px;
+}
+.year-border {
+	position: relative;
+	z-index: 2;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 80px;
+	height: 80px;
+	margin: 30px 0;
+	border: 4px solid #000;
+	border-radius: 50%;
+}
+.year-block {
+	width: 60px;
+	height: 60px;
+	font-size:18px;
+	font-family:PingFangSC-Regular, sans-serif;
+	font-weight:400;
+	line-height: 60px;
+	color: #fff;
+	background-color: #000;
+	border-radius: 50%;
+}
+.event {
+	position: relative;
+	z-index: 2;
+	display: flex;
+	align-items: center;
+	margin: 30px 0;
+}
+.event-border {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 30px;
+	height: 30px;
+	border: 2px solid #c9050c;
+	border-radius: 50%;
+}
+.event-block {
+	width: 20px;
+	height: 20px;
+	background-color: #c9050c;
+	border-radius: 50%;
+}
+.event-msg, .event-time {
+	position: absolute;
+	display: flex;
+	min-width: 180px;
+	font-size: 18px;
+	font-family: PingFangSC-Regular, sans-serif;
+	font-weight: 400;
+	line-height: 28px;
+}
+.right .event-msg {
+	right: 68px;
+}
+.left .event-msg {
+	left: 68px;
+}
+.right .event-time {
+	left: 68px;
+	align-items: center;
+	justify-content: flex-start;
+}
+.left .event-time {
+	right: 68px;
+	align-items: center;
+	justify-content: flex-end;
+}
+.event-text {
+	position: relative;
+	justify-content: center;
+	min-height: 48px;
+	padding: 10px 15px;
+	text-align: left;
+	color: #fff;
+	background-color: #c9050c;
+	border-radius: 4px;
+}
+.left .event-text div {
+	text-align: left;
+}
+.event-text::after {
+	display: block;
+	content: '';
+	position: absolute;
+	top: 50%;
+	width: 0;
+	height: 0;
+	border-width: 5px;
+	border-style: solid;
+}
+.left .event-text::after {
+	left: -15px;
+	transform: translateY(-50%) scale(2, 1.2);
+	border-color: transparent #c9050c transparent transparent;
+}
+.right .event-text::after {
+	right: -15px;
+	transform: translateY(-50%) scale(2, 1.2);
+	border-color: transparent transparent transparent #c9050c;
+}
+.icon {
+	width: 24px;
+	height: 24px;
+}
+.pc {
+	width: 50px;
+	height: 32px;
+}
+.phone {
+	width: 46px;
+	height: 43px;
+}
+.left .event-time div:first-child {
+	margin-right: 20px;
+}
+.right .event-time div:last-child {
+	margin-left: 20px;
+}
+.icon-2017Q3 {
+	background: url('https://www.btp.top/images/BTP_1.png') no-repeat center;
+	background-size: 100%;
+}
+.icon-2017Q4 {
+	background: url('https://www.btp.top/images/BTP_2.png') no-repeat center;
+	background-size: 100%;
+}
+.icon-2018Q1 {
+	background: url('https://www.btp.top/images/BTP_3.png') no-repeat center;
+	background-size: 100%;
+}
+.icon-2018Q2 {
+	background: url('https://www.btp.top/images/BTP_4.png') no-repeat center;
+	background-size: 100%;
+}
+.icon-2018Q3-1 {
+	background: url('https://www.btp.top/images/BTP_5.png') no-repeat center;
+	background-size: 100%;
+}
+.icon-2018Q3-2 {
+	background: url('https://www.btp.top/images/BTP_6.png') no-repeat center;
+	background-size: 100%;
+}
+.icon-2018Q4 {
+	background: url('https://www.btp.top/images/BTP_7.png') no-repeat center;
+	background-size: 100%;
+}
+.icon-2019Q1 {
+	background: url('https://www.btp.top/images/BTP_8.png') no-repeat center;
+	background-size: 100%;
+}
+.icon-2019Q2 {
+	background: url('https://www.btp.top/images/BTP_9.png') no-repeat center;
+	background-size: 100%;
+}
+.icon-2019Q3 {
+	background: url('https://www.btp.top/images/BTP_10.png') no-repeat center;
+	background-size: 100%;
+}
+.centerLine {
+	position: absolute;
+	z-index: 1;
+	top: 110px;
+	bottom: 110px;
+	border: 1px dashed #c9050c;
+}
+.press {
+	background: linear-gradient(to bottom, #fff, #fff 636px, #f5f5f5 636px, #f5f5f5);
+}
+.press-main {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 140px;
+}
+.news {
+	width: calc(30% + 10px);
+	max-width: 400px;
+}
+.news-img {
+	position: relative;
+}
+.img {
+	float: left;
+	width: 100%;
+}
+.news-day {
+	position: absolute;
+	top: 30px;
+	left: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 64px;
+	height: 54px;
+	color: #fff;
+	background: #c9050c;
+}
+.day {
+	font-size: 24px;
+	font-family: PingFangSC-Semibold, sans-serif;
+	font-weight: 600;
+	line-height: 1;
+}
+.month {
+	font-size: 14px;
+	font-family: PingFangSC-Regular, sans-serif;
+	font-weight: 400;
+}
+.news-main {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 352px;
+	padding: 0 30px;
+	text-align: left;
+	background-color: #fff;
+}
+.news-title {
+	padding: 40px 0 32px;
+	font-size: 24px;
+	font-family: PingFangSC-Semibold, sans-serif;
+	font-weight: 600;
+	color: #000;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.news-general {
+	flex-grow: 1;
+	font-size: 16px;
+	font-family: PingFangSC-Regular, sans-serif;
+	font-weight: 400;
+	color: #666;
+	line-height: 1.6;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+}
+.readMore {
+	padding: 36px 0;
+	font-size: 16px;
+	font-family: PingFangSC-Semibold, sans-serif;
+	font-weight: 600;
+	color: #000;
+}
+.readMore-btn {
+	padding-bottom: 60px;
+}
+.readMore-btn button {
+	width: 200px;
+	height: 60px;
+	margin: 60px 0;
+	font-size: 20px;
+	font-family: ArialMT, sans-serif;
+	font-weight: 400;
+	color: #fff;
+	background: #c9050c;
+	box-shadow: 0px 8px 16px 0px rgba(201,4,13,0.2);
+	border-radius: 30px;
+}
+.readMore-btn a {
+	display: block;
+	height: 100%;
+	width: 100%;
+	line-height: 60px;
+}
+.partners {
+	padding-bottom: 140px;
+	background-color: #161c27;
+}
+.partners .title, .partners-general {
+	color: #fff;
+}
+.partners-general {
+	margin: 70px 0 80px;
+	font-size: 24px;
+	font-family: PingFangSC-Ultralight, sans-serif;
+	font-weight: 200;
+}
+.partners-icon {
+	display: flex;
+	justify-content: space-around;
+}
+.partners-icon a {
+	margin: 40px 0;
+	width: 250px;
+}
+.partners-icon img {
+	float: left;
+}
+/* main end */
