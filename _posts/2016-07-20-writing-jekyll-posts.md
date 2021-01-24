@@ -10,4 +10,4 @@ categories: Category-1 Category-2
 **Hello world**, this is my first Jekyll blog post.
 
 I hope you like it!!!
-{page.title}
+{{page.title}}
