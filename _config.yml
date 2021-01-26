@@ -16,10 +16,8 @@ sass:
   sass_dir: _sass
   style: :compressed
 links:
-  facebook: brijeshb42
-  twitter: brijeshb42
-  email: brijeshb42@gmail.com
-  github: brijeshb42/bitwiser-material/
+  email: cjgflm@163.com
+  github: kevinchan0719.github.io
 exclude:
   - bower_components
   - README.md
