@@ -1,8 +1,7 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "Welcom to Press!"
 permalink: /press/
-categories: Category-1 Category-2
 ---
 
 # Welcome
