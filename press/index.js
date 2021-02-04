@@ -161,7 +161,6 @@ const i18n = new VueI18n({
 });
 
 let main = new Vue({
-  delimiters:['[[', ']]'],
   el: "#app",
   i18n,
   data () {
