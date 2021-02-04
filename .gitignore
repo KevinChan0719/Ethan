@@ -1,6 +1,10 @@
 _site
 .sass-cache
 bower_components/
+.jekyll-cache/
+.vscode/
+Gemfile
+Gemfile.lock
 #### joe made this: http://goel.io/joe
 
 #####=== OSX ===#####

@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -20,16 +22,17 @@
 						<a href='javascript:;'></a>
 					</div>
 					<nav class="nav">
+						{%raw%}
 						<a href='javascript:;'>{{$t('header.home')}}</a>
 						<a href="#about">{{$t('header.about')}}</a>
 						<a href="#roadmap">{{$t('header.roadmap')}}</a>
 						<a :href=`https://www.btp.top/press.html?lang=${$i18n.locale}`>{{$t('header.media')}}</a>
-						<a href="myPress">{{$t('header.press_new')}}</a>
 						<a href="#partners">{{$t('header.partners')}}</a>
 						<a href="http://exp.btceasypay.com/insight/" target="_blank">{{$t('header.explorer')}}</a>
+						{%endraw%}
 						<a href="javascript:;" class="lang" @mouseover="e => onmouseover(e)" @mouseout="e => onmouseout(e)">
 							<span ref="lang" class="lang-icon"></span>
-							{{$t('header.language')}}
+							{%raw%}{{$t('header.language')}}{%endraw%}
 							<div class="lang-change-wrap" ref="changeLang" style="display: none;">
 								<div class="lang-change">
 									<div></div>
@@ -58,15 +61,19 @@
 				<div id="about" class="about">
 					<div class="title">
 						<span>.</span>
+						{%raw%}
 						<span>{{$t('about.title')}}</span>
+						{%endraw%}
 						<span>.</span>
 					</div>
 					<div class="explain">
 						<div class="explain-text">
+							{%raw%}
 							<p class="explain-title" v-if="$i18n.locale === 'en_US'">The Most Powerful <span>Cross-chain Intelligence</span> In The World</p>
 							<p class="explain-title" v-else>世界上最强大的<span>跨链智能</span></p>
 							<p class="text">{{$t('about.general.first')}}</p>
 							<p class="text explain-under">{{$t('about.general.second')}}</p>
+							{%endraw%}
 						</div>
 						<div class="explain-img clearfix">
 							<img src="./images/BTP_pic1.jpg" alt="跨链智能">
@@ -74,15 +81,19 @@
 					</div>
 					<div class="whiteBook">
 						<div class="whiteBook-logo"></div>
+						{%raw%}
 						<p class="whiteBook-title">{{$t('about.whitepaper.btnText')}}</p>
 						<p class="text whiteBook-main" v-html="$t('about.whitepaper.general')"></p>
 						<button class="to-read" @click="readBook">{{$t('about.whitepaper.btnText')}}</button>
+						{%endraw%}
 					</div>
 				</div>
 				<div id="roadmap" class="roadmap">
 					<div class="title">
 						<span>.</span>
+						{%raw%}
 						<span>{{$t('roadmap.title')}}</span>
+						{%endraw%}
 						<span>.</span>
 					</div>
 					<div class="flow">
@@ -94,7 +105,9 @@
 							<div class="event-msg">
 								<div class="event-text" :style="`width:${$i18n.locale == 'en_US'? '200px' : '180px'}`">
 									<div>
+										{%raw%}
 										<p>{{$t('roadmap.Q32017')}}</p>
+										{%endraw%}
 									</div>
 								</div>
 							</div>
@@ -223,7 +236,9 @@
 							<div class="event-msg">
 								<div class="event-text" :style="`width:${$i18n.locale == 'en_US'? '270px' : '190px'}`">
 									<div>
+										{% raw %}
 										<p>{{$t('roadmap.Q12019')}}</p>
+										{% endraw %}
 									</div>
 								</div>
 							</div>
@@ -255,7 +270,9 @@
 							<div class="event-msg">
 								<div class="event-text" :style="`width:${$i18n.locale == 'en_US'? '270px' : '190px'}`">
 									<div>
+										{% raw %}
 										<p>{{$t('roadmap.Q32019')}}</p>
+										{% endraw %}
 									</div>
 								</div>
 							</div>
@@ -273,10 +290,14 @@
 				<div id="press" class="press">
 					<div class="title">
 						<span>.</span>
+						{% raw %}
 						<span>{{$t('press.title')}}</span>
+						{% endraw %}
 						<span>.</span>
 					</div>
+					
 					<div class="press-main" id="pressMain">
+						{%raw%}
 						<template v-for="(item, index) in press">
 							<div :key="index" class="news">
 								<div class="news-img clearfix">
@@ -295,6 +316,7 @@
 								</div>
 							</div>
 						</template>
+						{%endraw%}
 					</div>
 					<div class="readMore-btn">
 							<button>
@@ -302,20 +324,15 @@
 							</button>
 					</div>
 				</div>
-				<div id="press_new" class="press_new">
-					<div class="title">
-						<span>.</span>
-						<span>{{$t('press_new.title')}}</span>
-						<span>.</span>
-					</div>
-				</div>
 				<div id="partners" class="partners">
 					<div class="title">
 						<span>.</span>
-						<span>{{$t('partners.title')}}</span>
+						{%raw%}<span>{{$t('partners.title')}}</span>{%endraw%}
 						<span>.</span>
 					</div>
+					{%raw%}
 					<div class="partners-general">{{$t('partners.general')}}</div>
+					{%endraw%}
 					<div class="partners-icon">
 						<a href="https://www.zb.cn/" target="_blank" class="clearfix">
 							<img src="./images/BTP_zb.png" alt="ZB">
