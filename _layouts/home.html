@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>BitcoinPay-Lightning Payment Solution</title>
+		<link rel="icon" href="https://www.btp.top/images/favicon-20190326113208810.ico" type="image/x-icon">
+		<link rel="stylesheet" href="https://www.btp.top/style/reset.css">
+		<link rel="stylesheet" href="https://www.btp.top/style/common.css">
+		<link rel="stylesheet" href="https://www.btp.top/index/index.css" />
+		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+		<script src="https://unpkg.com/vue-i18n/dist/vue-i18n"></script>
+	</head>
+	<body>
+		<div id="app">
+			<header ref="header" class="header">
+				<div class="container">
+					<div ref="logo" class="logo">
+						<a href='javascript:;'></a>
+					</div>
+					<nav class="nav">
+						<a href='javascript:;'>{{$t('header.home')}}</a>
+						<a href="#about">{{$t('header.about')}}</a>
+						<a href="#roadmap">{{$t('header.roadmap')}}</a>
+						<a :href=`https://www.btp.top/press.html?lang=${$i18n.locale}`>{{$t('header.media')}}</a>
+						<a href="myPress">{{$t('header.press_new')}}</a>
+						<a href="#partners">{{$t('header.partners')}}</a>
+						<a href="http://exp.btceasypay.com/insight/" target="_blank">{{$t('header.explorer')}}</a>
+						<a href="javascript:;" class="lang" @mouseover="e => onmouseover(e)" @mouseout="e => onmouseout(e)">
+							<span ref="lang" class="lang-icon"></span>
+							{{$t('header.language')}}
+							<div class="lang-change-wrap" ref="changeLang" style="display: none;">
+								<div class="lang-change">
+									<div></div>
+									<div @click="changeLang('CN')">简体中文</div>
+									<div @click="changeLang('ENG')">English</div>
+								</div>
+							</div>
+						</a>
+					</nav>
+				</div>
+			</header>
+			<main class="main">
+				<div ref="banner" class="banner">
+					<div class="download">
+						<div class="banner-title">
+							<span>Peer-to-Peer Electronic Cash</span>
+							<!-- <span class="point"></span> -->
+						</div>
+						<div class="banner-general">
+							<p>Enabling new economies with low fee micro-transactions, </br>large business transactions, and permissionless spending.</p>
+						</div>
+						<!-- <button class="download-btn">下载钱包</button> -->
+					</div>
+					<iframe class="wave" frameborder="0" scrolling="no" src="https://www.btp.top/3d-wave.html" width="100%" height="500px"></iframe>
+				</div>
+				<div id="about" class="about">
+					<div class="title">
+						<span>.</span>
+						<span>{{$t('about.title')}}</span>
+						<span>.</span>
+					</div>
+					<div class="explain">
+						<div class="explain-text">
+							<p class="explain-title" v-if="$i18n.locale === 'en_US'">The Most Powerful <span>Cross-chain Intelligence</span> In The World</p>
+							<p class="explain-title" v-else>世界上最强大的<span>跨链智能</span></p>
+							<p class="text">{{$t('about.general.first')}}</p>
+							<p class="text explain-under">{{$t('about.general.second')}}</p>
+						</div>
+						<div class="explain-img clearfix">
+							<img src="./images/BTP_pic1.jpg" alt="跨链智能">
+						</div>
+					</div>
+					<div class="whiteBook">
+						<div class="whiteBook-logo"></div>
+						<p class="whiteBook-title">{{$t('about.whitepaper.btnText')}}</p>
+						<p class="text whiteBook-main" v-html="$t('about.whitepaper.general')"></p>
+						<button class="to-read" @click="readBook">{{$t('about.whitepaper.btnText')}}</button>
+					</div>
+				</div>
+				<div id="roadmap" class="roadmap">
+					<div class="title">
+						<span>.</span>
+						<span>{{$t('roadmap.title')}}</span>
+						<span>.</span>
+					</div>
+					<div class="flow">
+						<!-- 2017年 -->
+						<div class="year-border">
+							<div class="year-block">2017</div>
+						</div>
+						<div class="event right">
+							<div class="event-msg">
+								<div class="event-text" :style="`width:${$i18n.locale == 'en_US'? '200px' : '180px'}`">
+									<div>
+										<p>{{$t('roadmap.Q32017')}}</p>
+									</div>
+								</div>
+							</div>
+							<div class="event-border">
+								<div class="event-block"></div>
+							</div>
+							<div class="event-time">
+								<div>2017 - Q3</div>
+								<div class="icon icon-2017Q3"></div>
+							</div>
+						</div>
+						<div class="event left">
+							<div class="event-time">
+								<div class="pc icon-2017Q4"></div>
+								<div>2017 - Q4</div>
+							</div>
+							<div class="event-border">
+								<div class="event-block"></div>
+							</div>
+							<div class="event-msg">
+								<div class="event-text" :style="`width:${$i18n.locale == 'en_US'? '230px' : '210px'}`">
+									<div>
+										<p v-html="$t('roadmap.Q42017')"></p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- 2018年 -->
+						<div class="year-border">
+							<div class="year-block">2018</div>
+						</div>
+						<div class="event right">
+							<div class="event-msg">
+								<div class="event-text" :style="`width:${$i18n.locale == 'en_US'? '250px' : '210px'}`">
+									<div>
+										<p v-html="$t('roadmap.Q12018')"></p>
+									</div>
+								</div>
+							</div>
+							<div class="event-border">
+								<div class="event-block"></div>
+							</div>
+							<div class="event-time">
+								<div>2018 - Q1</div>
+								<div class="phone icon-2018Q1"></div>
+							</div>
+						</div>
+						<div class="event left">
+							<div class="event-time">
+								<div class="icon icon-2018Q2"></div>
+								<div>2018 - Q2</div>
+							</div>
+							<div class="event-border">
+								<div class="event-block"></div>
+							</div>
+							<div class="event-msg">
+								<div class="event-text" :style="`width:${$i18n.locale == 'en_US'? '270px' : '210px'}`">
+									<div>
+										<p v-html="$t('roadmap.Q22018')"></p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="event right">
+							<div class="event-msg">
+								<div class="event-text" :style="`width:${$i18n.locale == 'en_US'? '270px' : '210px'}`">
+									<div>
+										<p v-html="$t('roadmap.Q32018.first')"></p>
+									</div>
+								</div>
+							</div>
+							<div class="event-border">
+								<div class="event-block"></div>
+							</div>
+							<div class="event-time">
+								<div>2018 - Q3</div>
+								<div class="phone icon-2018Q3-1"></div>
+							</div>
+						</div>
+						<div class="event left">
+							<div class="event-time">
+								<div class="icon icon-2018Q3-2"></div>
+								<div>2018 - Q3</div>
+							</div>
+							<div class="event-border">
+								<div class="event-block"></div>
+							</div>
+							<div class="event-msg">
+								<div class="event-text" :style="`width:${$i18n.locale == 'en_US'? '360px' : '230px'}`">
+									<div>
+										<p v-html="$t('roadmap.Q32018.second')"></p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="event right">
+							<div class="event-msg">
+								<div class="event-text" :style="`width:${$i18n.locale == 'en_US'? '270px' : '220px'}`">
+									<div>
+										<p v-html="$t('roadmap.Q42018')"></p>
+									</div>
+								</div>
+							</div>
+							<div class="event-border">
+								<div class="event-block"></div>
+							</div>
+							<div class="event-time">
+								<div>2018 - Q4</div>
+								<div class="pc icon-2018Q4"></div>
+							</div>
+						</div>
+
+						<!-- 2019年 -->
+						<div class="year-border">
+							<div class="year-block">2019</div>
+						</div>
+						<div class="event left">
+							<div class="event-time">
+								<div class="icon icon-2019Q1"></div>
+								<div>2019 - Q1</div>
+							</div>
+							<div class="event-border">
+								<div class="event-block"></div>
+							</div>
+							<div class="event-msg">
+								<div class="event-text" :style="`width:${$i18n.locale == 'en_US'? '270px' : '190px'}`">
+									<div>
+										<p>{{$t('roadmap.Q12019')}}</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="event right">
+							<div class="event-msg">
+								<div class="event-text" :style="`width:${$i18n.locale == 'en_US'? '360px' : '210px'}`">
+									<div>
+										<p v-html="$t('roadmap.Q22019')"></p>
+									</div>
+								</div>
+							</div>
+							<div class="event-border">
+								<div class="event-block"></div>
+							</div>
+							<div class="event-time">
+								<div>2019 - Q2</div>
+								<div class="phone icon-2019Q2"></div>
+							</div>
+						</div>
+						<div class="event left">
+							<div class="event-time">
+								<div class="icon icon-2019Q3"></div>
+								<div>2019 - Q3</div>
+							</div>
+							<div class="event-border">
+								<div class="event-block"></div>
+							</div>
+							<div class="event-msg">
+								<div class="event-text" :style="`width:${$i18n.locale == 'en_US'? '270px' : '190px'}`">
+									<div>
+										<p>{{$t('roadmap.Q32019')}}</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- 未来 -->
+						<div class="year-border">
+							<div class="year-block">Future</div>
+						</div>
+
+						<!-- 中间线 -->
+						<div class="centerLine"></div>
+					</div>
+				</div>
+				<div id="press" class="press">
+					<div class="title">
+						<span>.</span>
+						<span>{{$t('press.title')}}</span>
+						<span>.</span>
+					</div>
+					<div class="press-main" id="pressMain">
+						<span>{{page.title}}</span>
+						<!-- {% for post in site.posts %}
+							<h2> {{ post.title }} </h2>
+							<h2> {{ post.url }} </h2>
+							<h2> {{ post.category }} </h2> 
+							<h2> {{ post.excerpt }} </h2>  
+						{% endfor %} -->
+						
+						<!--
+						<template v-for="(item, index) in press">
+							<div :key="index" class="news">
+								<div class="news-img clearfix">
+									<img class="img" :src="item.imgUrl" alt="资讯">
+									<div class="news-day">
+										<p class="day">{{item.day}}</p>
+										<p class="month">{{item.month}}</p>
+									</div>
+								</div>
+								<div class="news-main">
+									<div class="news-title">{{item.title}}</div>
+									<div class="news-general">{{item.general}}</div>
+									<div class="readMore">
+										<a :href=`https://www.btp.top/pressDetail.html?title=${encode(item.title)}&lang=${encode($i18n.locale)}`>Read More</a>
+									</div>
+								</div>
+							</div>
+						</template>-->
+					</div>
+					<div class="readMore-btn">
+							<button>
+								<a :href=`https://www.btp.top/press.html?lang=${$i18n.locale}`>READ MORE</a>
+							</button>
+					</div>
+				</div>
+				<div id="partners" class="partners">
+					<div class="title">
+						<span>.</span>
+						<span>{{$t('partners.title')}}</span>
+						<span>.</span>
+					</div>
+					<div class="partners-general">{{$t('partners.general')}}</div>
+					<div class="partners-icon">
+						<a href="https://www.zb.cn/" target="_blank" class="clearfix">
+							<img src="./images/BTP_zb.png" alt="ZB">
+						</a>
+						<a href="https://www.exxvip.com/" target="_blank" class="clearfix">
+							<img src="./images/BTP_gx.png" alt="GX">
+						</a>
+						<a href="https://www.coinegg.im" target="_blank" class="clearfix">
+							<img src="./images/BTP_coin.png" alt="COIN">
+						</a>
+					</div>
+					<div class="partners-icon">
+						<a href="https://www.myqbtc.com/" target="_blank" class="clearfix">
+							<img src="./images/BTP_qb.png" alt="QB">
+						</a>
+						<a href="http://www.funcoin.co" target="_blank" class="clearfix">
+							<img src="./images/BTP_fun.png" alt="FUN">
+						</a>
+						<a href="https://www.btctrade.tv/" target="_blank" class="clearfix">
+							<img src="./images/BTP_bao.png" alt="BAO">
+						</a>
+					</div>
+				</div>
+			</main>
+			<footer class="footer">&#169 2018 - 2019 BitcoinPay All rights reserved</footer>
+		</div>
+	</body>
+	<script type="text/javascript" src="https://www.btp.top/index/index.js"></script>
+</html>
