@@ -7,15 +7,17 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 		<title>BitcoinPay-Lightning Payment Solution</title>
-		<link rel="icon" href="https://www.btp.top/images/favicon-20190326113208810.ico" type="image/x-icon">
-		<link rel="stylesheet" href="https://www.btp.top/style/reset.css">
-		<link rel="stylesheet" href="https://www.btp.top/style/common.css">
-		<link rel="stylesheet" href="https://www.btp.top/index/index.css" />
+		<link rel="icon" href="/images/favicon-20190326113208810.ico" type="image/x-icon">
+		<link rel="stylesheet" href="/style/reset.css">
+		<link rel="stylesheet" href="/style/common.css">
+		<link rel="stylesheet" href="/index/index.css" />
 		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
 		<script src="https://unpkg.com/vue-i18n/dist/vue-i18n"></script>
+		<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	</head>
 	<body>
 		<div id="app">
+			{% assign cur_language = 'English' %}
 			<header ref="header" class="header">
 				<div class="container">
 					<div ref="logo" class="logo">
@@ -23,12 +25,12 @@
 					</div>
 					<nav class="nav">
 						{%raw%}
-						<a href='javascript:;'>{{$t('header.home')}}</a>
-						<a href="#about">{{$t('header.about')}}</a>
-						<a href="#roadmap">{{$t('header.roadmap')}}</a>
-						<a :href=`https://www.btp.top/press.html?lang=${$i18n.locale}`>{{$t('header.media')}}</a>
-						<a href="#partners">{{$t('header.partners')}}</a>
-						<a href="http://exp.btceasypay.com/insight/" target="_blank">{{$t('header.explorer')}}</a>
+							<a href='javascript:;'>{{$t('header.home')}}</a>
+							<a href="#about">{{$t('header.about')}}</a>
+							<a href="#roadmap">{{$t('header.roadmap')}}</a>
+							<a :href=`https://www.btp.top/press.html?lang=${$i18n.locale}`>{{$t('header.media')}}</a>
+							<a href="#partners">{{$t('header.partners')}}</a>
+							<a href="http://exp.btceasypay.com/insight/" target="_blank">{{$t('header.explorer')}}</a>
 						{%endraw%}
 						<a href="javascript:;" class="lang" @mouseover="e => onmouseover(e)" @mouseout="e => onmouseout(e)">
 							<span ref="lang" class="lang-icon"></span>
@@ -36,11 +38,16 @@
 							<div class="lang-change-wrap" ref="changeLang" style="display: none;">
 								<div class="lang-change">
 									<div></div>
-									<div @click="changeLang('CN')">简体中文</div>
-									<div @click="changeLang('ENG')">English</div>
+									<div @click="changeLang('CN')">
+										简体中文
+									</div>
+									<div @click="changeLang('ENG')">
+										English
+									</div>
 								</div>
 							</div>
 						</a>
+						a{{page.lang }}b{{product.title }}c
 					</nav>
 				</div>
 			</header>
@@ -296,33 +303,41 @@
 						<span>.</span>
 					</div>
 					
-					<div class="press-main" id="pressMain">
-						{% assign total = 0 %}
-						{%for post in site.categories.press%}
+					{%raw%}<div class="press-main" id="pressMain" v-html="sb"></div>{%endraw%}
+						<!-- {%raw%} <div  v-if="$i18n.locale === 'en_US'"> 
+							<div id="sb"></div>
+							<script type="text/javascript">
+								$.get("press_en.html", d => {
+									$("#sb").html(d)
+								})
+							</script> 
+						{%endraw%}
+						{%raw%} </div> {%endraw%}
+						{%raw%}<div v-else>   {%endraw%}
+							<iframe src = "press_ch.html"></iframe>
+						{%raw%}</div>{%endraw%} -->
+
+						<!-- {% assign total = 0 %}
+						{%for post in site.categories.press_en%}
 							{% assign total = total | plus: 1%}
 							{% if total <= 3 %}
-							<div class="news">
-								<div class="news-img clearfix">
-									<img class="img" src={{post.featimg}} alt="资讯">
-									<div class="news-day">
-										<p class="day">{{post.date | date :  '%d'}}</p>
-										<p class="month">{{post.date | date :  '%y'}}</p>
+								<div class="news">
+									<div class="news-img clearfix">
+										<img class="img" src={{post.featimg}} alt="资讯">
+										<div class="news-day">
+											<p class="day">{{post.date | date :  '%d'}}</p>
+											<p class="month">{{post.date | date :  '%y'}}</p>
+										</div>
+									</div>
+									<div class="news-main">
+										<div class="news-title">{{post.title}}</div>
+										<div class="news-general">{{post.excerpt}}</div>
+										<div class="readMore"> </div>
 									</div>
 								</div>
-								<div class="news-main">
-									<div class="news-title">{{post.title}}</div>
-									<div class="news-general">{{post.excerpt}}</div>
-									<div class="readMore">
-										<!-- {%raw%}
-										<a :href=`https://www.btp.top/pressDetail.html?title=${encode(item.title)}&lang=${encode($i18n.locale)}`>Read More</a>
-										{%endraw%} -->
-									</div>
-								</div>
-							</div>
 							{% endif %}
-						{%endfor%}
-
-						<!-- {%raw%}
+						{%endfor%} -->
+						<!-- {%raw%}{%raw%}
 						<template v-for="(item, index) in press">
 							<div :key="index" class="news">
 								<div class="news-img clearfix">
@@ -342,7 +357,7 @@
 							</div>
 						</template>
 						{%endraw%} -->
-					</div>
+					
 					<div class="readMore-btn">
 							<button>
 								<a :href=`press.html?lang=${$i18n.locale}`>READ MORE</a>
@@ -385,5 +400,5 @@
 			<footer class="footer">&#169 2018 - 2019 BitcoinPay All rights reserved</footer>
 		</div>
 	</body>
-	<script type="text/javascript" src="https://www.btp.top/index/index.js"></script>
+	<script type="text/javascript" src="/index/index.js"></script>
 </html>

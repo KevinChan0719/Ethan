@@ -1,0 +1,26 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+	<body>
+    {%for post in site.categories.press%}
+		{% assign total = total | plus: 1%}
+		{% if total <= 3 %}
+			<div class="news">
+				<div class="news-img clearfix">
+					<img class="img" src={{post.featimg}} alt="资讯">
+					<div class="news-day">
+						<p class="day">{{post.date | date :  '%d'}}</p>
+						<p class="month">{{post.date | date :  '%y'}}</p>
+					</div>
+				</div>
+				<div class="news-main">
+					<div class="news-title">{{post.title}}</div>
+					<div class="news-general">{{post.excerpt}}</div>
+					<div class="readMore"> </div>
+				</div>
+			</div>
+		{% endif %}
+	{%endfor%} 
+	</body>
+</html>

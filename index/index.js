@@ -174,7 +174,8 @@ let main = new Vue({
           day: this.$t("press.main.third.day"),
           month: this.$t("press.main.third.month")
         }
-      ]
+      ],
+      sb: ""
     };
   },
   computed: {
@@ -204,6 +205,10 @@ let main = new Vue({
     if (this.getQueryVariable("lang")) {
       this.$i18n.locale = this.getQueryVariable("lang");
     }
+    
+    $.get("press_en.html", d => {
+      this.sb = d
+    })
   },
   mounted() {
     window.onresize = () => {
@@ -247,9 +252,15 @@ let main = new Vue({
       if (lang === "CN") {
         document.title = "比特币支付-区块链网络跨链智能合约服务商";
         this.$set(this.$i18n, "locale", "zh_CN");
+        $.get("press_ch.html", d => {
+          this.sb = d
+        })
       } else {
         document.title = "BitcoinPay-Lightning Payment Solution";
         this.$set(this.$i18n, "locale", "en_US");
+        $.get("press_en.html", d => {
+          this.sb = d
+        })
       }
       this.title.map((e, i) => {
         this.$set(this.press[i], "title", e);
