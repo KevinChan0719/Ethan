@@ -16,13 +16,13 @@ html, body, #app {
   box-shadow: 0px 5px 16px 0px rgba(0, 0, 0, 0.1);
 }
 .logo {
-	background-image: url("https://www.btp.top/images/BTP-logo2.png");
+	background-image: url("/images/BTP-logo2.png");
 }
 .nav a{
 	color: #000;
 }
 .lang-icon {
-	background-image: url('https://www.btp.top/images/BTP-lang2.png');
+	background-image: url('/images/BTP-lang2.png');
 }
 /* header end */
 

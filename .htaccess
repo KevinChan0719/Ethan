@@ -1,4 +1,4 @@
 RewriteEngine On
 RewriteCond %{SERVER_PORT} 80
 RewriteCond %{HTTP_HOST} ^(www\.)?btp\.top
-RewriteRule ^(.*)$ https://www.btp.top/$1 [R,L]
+RewriteRule ^(.*)$ /$1 [R,L]
