@@ -28,7 +28,7 @@
 							<a href='javascript:;'>{{$t('header.home')}}</a>
 							<a href="#about">{{$t('header.about')}}</a>
 							<a href="#roadmap">{{$t('header.roadmap')}}</a>
-							<a :href=`https://www.btp.top/press.html?lang=${$i18n.locale}`>{{$t('header.media')}}</a>
+							<a :href=`/press.html?lang=${$i18n.locale}`>{{$t('header.media')}}</a>
 							<a href="#partners">{{$t('header.partners')}}</a>
 							<a href="http://exp.btceasypay.com/insight/" target="_blank">{{$t('header.explorer')}}</a>
 						{%endraw%}
@@ -63,7 +63,7 @@
 						</div>
 						<!-- <button class="download-btn">下载钱包</button> -->
 					</div>
-					<iframe class="wave" frameborder="0" scrolling="no" src="https://www.btp.top/3d-wave.html" width="100%" height="500px"></iframe>
+					<iframe class="wave" frameborder="0" scrolling="no" src="3d-wave.html" width="100%" height="500px"></iframe>
 				</div>
 				<div id="about" class="about">
 					<div class="title">
@@ -351,7 +351,7 @@
 									<div class="news-title">{{item.title}}</div>
 									<div class="news-general">{{item.general}}</div>
 									<div class="readMore">
-										<a :href=`https://www.btp.top/pressDetail.html?title=${encode(item.title)}&lang=${encode($i18n.locale)}`>Read More</a>
+										<a :href=`/pressDetail.html?title=${encode(item.title)}&lang=${encode($i18n.locale)}`>Read More</a>
 									</div>
 								</div>
 							</div>
@@ -360,7 +360,7 @@
 					
 					<div class="readMore-btn">
 							<button>
-								<a :href=`press.html?lang=${$i18n.locale}`>READ MORE</a>
+								<a :href=`/press.html?lang=${$i18n.locale}`>READ MORE</a>
 							</button>
 					</div>
 				</div>

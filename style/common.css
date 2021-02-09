@@ -1,31 +1,31 @@
 /* public start */
 @font-face {
 	font-family: ArialMT;
-	src: url('https://www.btp.top/font/arialmt.ttf');
+	src: url('/font/arialmt.ttf');
 	font-weight: normal;
   font-style: normal;
 }
 @font-face {
 	font-family: STHeiti-Light;
-	src: url('https://www.btp.top/font/STHeiti-Light.ttc');
+	src: url('/font/STHeiti-Light.ttc');
 	font-weight: normal;
   font-style: normal;
 }
 @font-face {
 	font-family: BauhausStd-Bold;
-	src: url('https://www.btp.top/font/BauhausStd-Bold.otf');
+	src: url('/font/BauhausStd-Bold.otf');
 	font-weight: normal;
   font-style: normal;
 }
 @font-face {
 	font-family: Rockwell-Bold;
-	src: url('https://www.btp.top/font/RockwellStd-Bold.otf');
+	src: url('/font/RockwellStd-Bold.otf');
 	font-weight: normal;
   font-style: normal;
 }
 @font-face {
 	font-family: Baskerville;
-	src: url('https://www.btp.top/font/MBaskerville.otf');
+	src: url('/font/MBaskerville.otf');
 	font-weight: normal;
   font-style: normal;
 }

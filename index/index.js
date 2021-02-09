@@ -46,21 +46,21 @@ const i18n = new VueI18n({
           first: {
             title: "BTP即将上线qbtc.com",
             general: "QBTC是一个交易平台，中文名字叫国际Q网。将于2018年1月22日18点开放BTP/CNYT交易。BTP中文名比特支付，为比特币的分叉币，采用GPU挖矿，扩容区块为8M，总量2.1亿。",
-            imgUrl: 'https://www.btp.top/images/press/press_1.jpg',
+            imgUrl: 'images/press/press_1.jpg',
             day: "21",
             month: "JAN"
           },
           second: {
             title: "比特支付BTP涨幅达870%",
             general: "BTP价格从上线时的16美金涨至最高价139.99美金，目前维持在120美金以上的价格，涨幅高达870%。BTP中文为比特支付，是比特币的反差比，旨在对接全球线上线下支付，采用GPU挖矿，扩容区块为8M，总量2.1亿枚，无预挖。",
-            imgUrl: 'https://www.btp.top/images/press/press_5.jpg',
+            imgUrl: 'images/press/press_5.jpg',
             day: "18",
             month: "JAN"
           },
           third: {
             title: "比特支付BTP正式上线ZB",
             general: "今日ZB发布公告称，ZB.com将于2018年1月3日20点开放BTP/QC、BTP/USDT、BTP/BTC交易。BTP中文名称比特支付，是比特币的分叉币，采用GPU挖矿，扩容区块为8M，总量2.1亿枚，无预挖。",
-            imgUrl: 'https://www.btp.top/images/press/press_6.jpg',
+            imgUrl: 'images/press/press_6.jpg',
             day: "03",
             month: "JAN"
           }
@@ -118,21 +118,21 @@ const i18n = new VueI18n({
           first: {
             title: "BTP Mainnet will be Upgraded in May",
             general: "We are going to upgrade Bitcoinpay's mainnet in the following May, 2019, in which we'll change the algorithm from POW to POS in order to fix a variety of security problems resulted from computing fluctuations as well as to avoid computing resources waste. After upgrading, Bitcoinpay is able to support smart contract, which can avoid centralization by oligarchic combination much more better. And currently BTP's main transaction is on zb.com exchange platform and we will be listed on other major exchanges after this mainnet upgrading. ",
-            imgUrl: 'https://www.btp.top/images/press/press_7.jpg',
+            imgUrl: 'images/press/press_7.jpg',
             day: "29",
             month: "APR"
           },
           second: {
             title: "BTP To Be Online On QBTC.COM",
             general: "QBTC is a cryptocurrency exchange as known as “International Q Net” in Chinese. It will open the BTP/CNYT transaction at 18:00, Jan, 22nd, 2018. BTP is short for Bitcoinpay, which is the fork cryptocurrency of Bitcoin. The mining mode of GPU was adopted to expand the capacity to 8M blocks with a total amount of 210,000,000.",
-            imgUrl: 'https://www.btp.top/images/press/press_1.jpg',
+            imgUrl: 'images/press/press_1.jpg',
             day: "21",
             month: "JAN"
           },
           third: {
             title: "Bitcoin Pay BTP Rose 870%",
             general: "BTP’s price has increased from online price of $16 to the top price of $139.99 and maintaining price above $120 with an increase of 870%. BTP is short for Bitcoinpay, which is the fork cryptocurrency of Bitcoin. The mining mode of GPU (no pre-mining) was adopted to expand the capacity to 8M blocks with a total amount of 210,000,000.",
-            imgUrl: 'https://www.btp.top/images/press/press_5.jpg',
+            imgUrl: 'images/press/press_5.jpg',
             day: "18",
             month: "JAN"
           }
@@ -306,15 +306,15 @@ let main = new Vue({
         if (scrollTop > 100) {
           this.$refs.header.style.color = "#000";
           this.$refs.logo.style.backgroundImage =
-            "url('https://www.btp.top/images/BTP-logo2.png')";
+            "url('images/BTP-logo2.png')";
           this.$refs.lang.style.backgroundImage =
-            "url('https://www.btp.top/images/BTP-lang2.png')";
+            "url('images/BTP-lang2.png')";
         } else {
           this.$refs.header.style.color = "#fff";
           this.$refs.logo.style.backgroundImage =
-            "url('https://www.btp.top/images/BTP_logo.png')";
+            "url('images/BTP_logo.png')";
           this.$refs.lang.style.backgroundImage =
-            "url('https://www.btp.top/images/BTP_lang.png')";
+            "url('images/BTP_lang.png')";
         }
       } else {
         this.$refs.header.style.backgroundColor = `rgba(255, 255, 255, 1)`;
@@ -322,9 +322,9 @@ let main = new Vue({
         this.$refs.header.style.boxShadow =
           "0px 5px 16px 0px rgba(0, 0, 0, 0.1)";
         this.$refs.logo.style.backgroundImage =
-          "url('https://www.btp.top/images/BTP-logo2.png')";
+          "url('images/BTP-logo2.png')";
         this.$refs.lang.style.backgroundImage =
-          "url('https://www.btp.top/images/BTP-lang2.png')";
+          "url('images/BTP-lang2.png')";
       }
     }
   }
